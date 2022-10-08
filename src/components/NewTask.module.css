@@ -1,0 +1,31 @@
+.newTask{
+    display: flex;
+    justify-content: center;
+
+    gap: 0.5rem;
+
+    width: 46rem;
+    height: 3.37rem;
+    margin: 0 auto;
+
+    margin-top: -1.68rem;
+}
+
+.newTask input{
+    padding: 1rem;
+
+    border-radius: 8px;
+    border: 1px solid var(--gray-700);
+    background: var(--gray-500);
+
+    width: 100%;
+
+    font-size: 1rem;    
+}
+
+.newTask input:focus{
+    outline: transparent;
+    border: 1px solid var(--purple);
+    
+    color: var(--gray-100);
+}
