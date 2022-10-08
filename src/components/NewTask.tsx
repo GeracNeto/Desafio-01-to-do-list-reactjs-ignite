@@ -9,7 +9,7 @@ export function  NewTask(){
             <input type="text" placeholder='Adicione uma nova tarefa'/>
             <button type='submit'>
                 Criar
-                <PlusCircle />
+                <PlusCircle size={16}/>
             </button>
         </form>
     )
