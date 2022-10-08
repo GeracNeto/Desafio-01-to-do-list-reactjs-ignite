@@ -1,0 +1,31 @@
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.info p{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.info p span{
+    background: var(--gray-400);
+
+    padding: 0.125rem 0.5rem ;
+    border-radius: 100%;
+
+    color: var(--gray-200) ;
+}
+
+.tasksCreated{
+    color: var(--blue);
+}
+
+.tasksCompleted{
+    color: var(--purple);
+}
