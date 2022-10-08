@@ -1,0 +1,8 @@
+.wrapper{
+    width: 46rem;
+    margin: 4rem auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
