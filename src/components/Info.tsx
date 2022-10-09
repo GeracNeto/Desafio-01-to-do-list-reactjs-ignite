@@ -10,7 +10,7 @@ export function Info() {
             </p>
             <p className={styles.tasksCompleted}>
                 Concluídas
-                <span className={styles.counter}>0</span>
+                <span className={styles.counter}>2 de 5</span>
             </p>
         </section>
     )
