@@ -2,13 +2,14 @@ import { Header } from './components/Header'
 import { NewTask } from './components/NewTask'
 import { Info } from './components/Info'
 import { NoTasks } from './components/NoTasks'
+import { Task } from './components/Task'
 
 import './global.css'
 import styles from './App.module.css'
 
-
-
 export function App() {
+
+  const showTask = true
 
 
   return (
@@ -20,7 +21,8 @@ export function App() {
       <main className={styles.wrapper}>
         <Info />
 
-        <NoTasks />
+        {showTask ? <Task /> : <NoTasks />}
+
 
       </main>
 
