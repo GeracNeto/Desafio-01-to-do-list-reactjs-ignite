@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 46rem;
+    margin: 4rem auto 0;
 }
 
 .info p{
@@ -17,7 +18,8 @@
     background: var(--gray-400);
 
     padding: 0.125rem 0.5rem ;
-    border-radius: 100%;
+    border-radius: 50px;
+
 
     color: var(--gray-200) ;
 }
