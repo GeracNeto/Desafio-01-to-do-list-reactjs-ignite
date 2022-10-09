@@ -1,0 +1,30 @@
+.task{
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+    background: var(--gray-500);
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+}
+
+.trash{
+    color: var(--gray-300);
+}
+
+.task div{
+    width: 100%;
+}
+
+.task div p{
+    line-height: 140%;
+    color: var(--gray-100);
+}
+
+.task input{
+   
+}
