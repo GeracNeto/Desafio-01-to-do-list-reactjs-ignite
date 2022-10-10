@@ -7,23 +7,53 @@ import { Task } from './components/Task'
 import './global.css'
 import styles from './App.module.css'
 
+import { useState } from 'react'
+
+export interface ITask {
+  id: string;
+  task: string;
+  isComplete: boolean;
+}
+
 export function App() {
 
-  const showTask = true
+  const [todos, setTodos] = useState<ITask[]>([]);
+
+  function createTask(task: ITask) {
+    setTodos([...todos, task]);
+  }
+
+  function deleteTask(id: string) {
+    const newTodo = todos.filter((todo) => todo.id !== id);
+
+    setTodos(newTodo);
+  }
+
+  console.log(todos)
 
 
   return (
     <div>
       <Header />
 
-      <NewTask />
+      <NewTask
+        onCreateTask={createTask}
+      />
 
       <main className={styles.wrapper}>
         <Info />
 
-        {showTask ? <Task /> : <NoTasks />}
-
-
+        {todos.length >= 1 ? (
+          todos.map(todo => (
+            <Task
+              key={todo.id}
+              task={todo}
+              onDeleteTask={deleteTask}
+            />
+          ))
+        ) : (
+          <NoTasks />
+        )}
       </main>
 
 

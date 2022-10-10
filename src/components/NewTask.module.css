@@ -41,6 +41,8 @@
     padding: 1rem;
 
     transition: 0.2s;
+
+    cursor: pointer;
 }
 
 .newTask input:focus{

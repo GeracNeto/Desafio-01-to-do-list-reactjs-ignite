@@ -8,12 +8,21 @@ import { Trash, Check } from 'phosphor-react'
 
 import * as Checkbox from '@radix-ui/react-checkbox'
 
-export function Task() {
+import { ITask } from '../App'
 
-    const [checked, setCheck] = useState(false)
+interface TaskProps {
+    task: ITask;
+    onDeleteTask: (id: string) => void;
+}
+
+export function Task({ task, onDeleteTask }: TaskProps) {
+
+    const [checked, setChecked] = useState<boolean>(false);
 
     function handleCheck() {
-        setCheck(!checked)
+        setChecked(!checked)
+
+        
     }
 
     return (
@@ -30,10 +39,10 @@ export function Task() {
                     <Check size={12} weight="bold" />
                 </Checkbox.Indicator>
             </Checkbox.Root>
-            <p>
-                Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.
+            <p className={checked ? styles.checked : styles.normal}>
+                {task.task}
             </p>
-            <Trash className={styles.trash} />
+            <Trash className={styles.trash} onClick={() => onDeleteTask(task.id)}/>
         </div>
     )
 }

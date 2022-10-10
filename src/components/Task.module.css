@@ -22,7 +22,9 @@
 
 .task p {
     line-height: 140%;
-    color: var(--gray-100);
+    width: 100%;
+
+    display: flex;
 }
 
 .checkbox {
@@ -54,18 +56,30 @@
     transition: 0.2s;
 }
 
-.checkboxChecked:hover{
+.checkboxChecked:hover {
     background: var(--purple);
+    cursor: pointer;
 }
 
 .checkboxUnchecked:hover {
     background: var(--blue-dark);
-    
+    cursor: pointer;
     opacity: 0.5;
 }
 
-.trash:hover{
+.trash:hover {
     background: var(--gray-400);
     color: var(--danger);
     border-radius: 4px;
+    cursor: pointer;
+}
+
+.normal {
+    font-style: none;
+    color: var(--gray-100);
+}
+
+.checked {
+    text-decoration: line-through;
+    color: var(--gray-300);
 }
