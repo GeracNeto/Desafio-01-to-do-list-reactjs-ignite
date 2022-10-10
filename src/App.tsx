@@ -17,7 +17,7 @@ export interface ITask {
 
 export function App() {
 
-  const [todos, setTodos] = useState<ITask[]>([]);
+  const [todos, setTodos] = useState<ITask[]>([])
 
   function createTask(task: ITask) {
     setTodos([...todos, task]);
@@ -29,8 +29,15 @@ export function App() {
     setTodos(newTodo);
   }
 
+  function completedTask(id: string) {
+    const completedTask = todos.map(task => task.id === id ? {
+      ...task,
+      isComplete: !task.isComplete
+    } : task);
+    
+    setTodos(completedTask)
+  }
   console.log(todos)
-
 
   return (
     <div>
@@ -41,7 +48,9 @@ export function App() {
       />
 
       <main className={styles.wrapper}>
-        <Info />
+        <Info
+          tasks={todos}
+        />
 
         {todos.length >= 1 ? (
           todos.map(todo => (
@@ -49,6 +58,7 @@ export function App() {
               key={todo.id}
               task={todo}
               onDeleteTask={deleteTask}
+              onCompletedTask={completedTask}
             />
           ))
         ) : (

@@ -13,16 +13,17 @@ import { ITask } from '../App'
 interface TaskProps {
     task: ITask;
     onDeleteTask: (id: string) => void;
+    onCompletedTask: (id: string) => void
 }
 
-export function Task({ task, onDeleteTask }: TaskProps) {
+export function Task({ task, onDeleteTask, onCompletedTask }: TaskProps) {
 
     const [checked, setChecked] = useState<boolean>(false);
 
     function handleCheck() {
         setChecked(!checked)
 
-        
+        onCompletedTask(task.id)        
     }
 
     return (
@@ -42,7 +43,7 @@ export function Task({ task, onDeleteTask }: TaskProps) {
             <p className={checked ? styles.checked : styles.normal}>
                 {task.task}
             </p>
-            <Trash className={styles.trash} onClick={() => onDeleteTask(task.id)}/>
+            <Trash className={styles.trash} onClick={() => onDeleteTask(task.id)} />
         </div>
     )
 }

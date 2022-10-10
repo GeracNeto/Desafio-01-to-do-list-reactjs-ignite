@@ -25,8 +25,6 @@ export function NewTask({ onCreateTask }: CreateTask) {
             isComplete: false
         };
 
-        console.log(task);
-
         onCreateTask(task);
 
         setNewTask("");
