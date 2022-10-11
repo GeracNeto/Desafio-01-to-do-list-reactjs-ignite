@@ -2,7 +2,9 @@
 
 ## Projeto
 
-<img src="src/assets/To-Do-List-Ignite-e-mais-1-página-Pessoal-—-Microsoft_-Edge-2022-10-10-21-30-33.gif" />
+<div align="center">
+<img src="src/assets/To-Do-List-Ignite-e-mais-1-página-Pessoal-—-Microsoft_-Edge-2022-10-10-21-30-33.gif" width="600px"/>
+</div>
 
 <img src="src/assets/tasks.jpeg" />
 
