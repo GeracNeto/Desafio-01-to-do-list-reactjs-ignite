@@ -2,13 +2,13 @@
 
 ## Projeto
 
-<div align="center">
+<div>
 <img src="src/assets/To-Do-List-Ignite-e-mais-1-página-Pessoal-—-Microsoft_-Edge-2022-10-10-21-30-33.gif" width="600px"/>
 </div>
 
-<img src="src/assets/tasks.jpeg" />
+<img src="src/assets/tasks.jpeg" width="600px"/>
 
-<img src="src/assets/notask.jpeg" />
+<img src="src/assets/notask.jpeg" width="600px"/>
 
 # Install
 
